@@ -4,6 +4,8 @@
 
 本Blog，基于 vue 2.x、vue-router 2.x、(vuex 2.x 已基本去除,感觉用了还不如不用) 构建
 
+外壳部分用了Electron好直接调试,用得是一个vue2模版
+
 完全抛弃后端,使用[GitHub Pages](https://pages.github.com/)提供服务
 
 核心的部分就是用的Github Api提供的文件列表然后在本地生成一个List 之后都由该List 进一步渲染出需要的md文档
