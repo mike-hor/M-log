@@ -20,6 +20,12 @@
 
 * [x] 渐进式App设计
 
-* [ ] 完善渐进式App设计
+使用的是webpack插件[offline-plugin](https://github.com/NekR/offline-plugin)
+
+需要注意的是如果考虑route网络出错的跳转需配置navigateFallbackURL貌似我因为用的axios不是fetch所以不支持
+
+一些路由的拦截,所以我就直接网络错误强行跳转的error路由
+
+**用了之后好处是资源直接就本地缓存了,当然blog的文章也只是用Session Strong做的缓存当前有效**
 
 * [ ] 考虑抽离出一些设置为配置文件,进一步提升通用性
