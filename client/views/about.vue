@@ -11,7 +11,6 @@
 </template>
 
 <script>
-	import Apptoolbar from '../components/toolbar'
 	import Ps from 'perfect-scrollbar'
 	import marked from 'marked'
 	import 'github-markdown-css/github-markdown.css'
@@ -29,8 +28,7 @@
 			}
 		},
 		components: {
-			Loading,
-			Apptoolbar
+			Loading
 		},
 		computed: {
 
@@ -45,6 +43,7 @@
 				});
 			}, (response) => {
 				this.loading = false;
+				this.$router.push("/error");
 				console.log(response);
 			})
 		},

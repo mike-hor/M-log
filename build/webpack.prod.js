@@ -55,7 +55,8 @@ base.plugins.push(
     relativePaths: false,
     AppCache: false,
     ServiceWorker: {
-      events: true
+      events: true,
+      navigateFallbackURL: '/'//error
     }
   })
 )

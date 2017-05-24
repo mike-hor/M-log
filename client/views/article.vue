@@ -153,6 +153,7 @@
 					});
 				}, (response) => {
 					this.loading = false;
+					this.$router.push("/error");
 					console.log(response);
 				})
 				var index = this.$route.query.currentIndex;
@@ -268,7 +269,8 @@
 	
 	.md-dialog {
 		min-width: 600px;
-	}	
+	}
+	
 	@media screen and (max-width:800px) {
 		.pager {
 			text-align: center;

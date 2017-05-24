@@ -49,6 +49,7 @@
 					this.list = res;
 				}
 			}, (response) => {
+				this.$router.push("/error");
 				console.log(response);
 			})
 

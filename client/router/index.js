@@ -4,10 +4,11 @@ import Home from '../views/Home'
 import Article from '../views/article'
 import Archive from '../views/archive'
 import About from '../views/about'
+import Error from '../views/error'
 Vue.use(Router)
 const routes = [{
 	path: '/',
-	component: Home
+	component: Home //Home
 }, {
 	path: '/article/:id',
 	component: Article,
@@ -21,6 +22,9 @@ const routes = [{
 },{
 	path: '/about',
 	component: About
+},{
+	path: '/error',
+	component: Error
 }];
 const router = new Router({
 	routes,

@@ -53,6 +53,7 @@
 				this.loading = false;
 				this.content = res;
 			}, (response) => {
+				this.$router.push("/error");
 				console.log(response);
 			})
 		},
