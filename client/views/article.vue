@@ -162,7 +162,7 @@
 					return
 				}
 				var list = JSON.parse(window.sessionStorage.getItem('list'));
-				//				console.log('当前index:' + index)
+				//console.log('当前index:' + index)
 				if(index > 0) this.pager.prev = list[+index - 1];
 				if(index < list.length) this.pager.next = list[+index + 1];
 				var article = this.$refs.article;

@@ -1,5 +1,6 @@
 import axios from 'axios'
 import Qs from 'qs'
+import Config from '../config/config.js'
 //axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 axios.defaults.headers.post['Content-Type'] = 'Content-Type:text/html';
 //axios.defaults.baseURL = '';
@@ -79,10 +80,10 @@ export default {
 			success(Cache.get('archive'));
 		} else {
 			if(Cache.has('list')) {
-				success(this.sortArchive(Cache.get('list'), 'year'));
+				success(this.sortArchive(Cache.get('list'), Config.Archive_Type));
 			} else {
 				this.Getarticlelist((res) => {
-					success(this.sortArchive(res, 'year'));
+					success(this.sortArchive(res, Config.Archive_Type));
 				}, (res) => {
 					error(res);
 				})
@@ -90,7 +91,7 @@ export default {
 		}
 	},
 	sortArchive: function(list, type) {
-		if(type == 'year') {
+		if(type == 'YEAR') {
 			var archive = {};
 			list.forEach((v, i, arr) => {
 				var year = v.date.split('-')[0];
@@ -110,14 +111,14 @@ export default {
 			})
 			Cache.set('archive', archive);
 			return archive;
-		} else if(type == 'type') {
+		} else if(type == 'TYPE') {
 			console.log('使用文章tag分类')
 			var archive = {};
 			list.forEach((v, i, arr) => {
 				var tag = [];
 				tag.push(v.tag);
-				if(tag.indexOf('&')) {
-					tag = tag.split('&');
+				if(v.tag.indexOf('&')) {
+					tag = v.tag.split('&');
 					tag.forEach((value, key, arry) => {
 						if(value in archive) {
 							archive[value].push(v);
@@ -129,6 +130,8 @@ export default {
 				}
 
 			})
+			Cache.set('archive', archive);
+			return archive;
 		}
 
 	},
