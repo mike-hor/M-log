@@ -17,6 +17,9 @@
 				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=648141017&auto=0&height=90"></iframe>
 			</div>
 		</transition>
+		<div class="live2d-container">
+			<canvas id="glcanvas" width="340" height="470"></canvas>
+		</div>
 	</div>
 </template>
 
@@ -25,7 +28,11 @@
 		margin: 0;
 		font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', Ubuntu, 'segoe ui', arial, sans-serif;
 	}
-	
+	.live2d-container{
+		position: absolute;
+		left: 0px;
+		top: 50%;
+	}
 	.slider-content {
 		padding: 0 15px;
 	}
