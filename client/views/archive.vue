@@ -199,7 +199,7 @@
 	
 	.md-theme-default a:not(.md-button):hover {
 		color: #42b983;
-		text-decoration: underline;
+		text-decoration: none;
 	}
 	
 	.pages {
