@@ -4,15 +4,17 @@
 			<md-card-media-actions>
 				<md-card-actions>
 					<md-button class="md-icon-button" @click.native="back">
-						<md-icon class="ico-back">←</md-icon>
+						<md-icon class="ico-back my-button" style="font-size: 35px;top: -9px;left: -8px;">keyboard_backspace</md-icon>
 					</md-button>
 					<md-button id="comment-button" class="md-icon-button" @click.native="comment">
 						<i class="comment"></i>
 					</md-button>
 
 					<md-button id="player-button" @click.native="showplayer" class="md-icon-button">
-						<i v-bind:class='{active:player}' class="ico-player">♫</i>
+						<!--<i v-bind:class='{active:player}' class="ico-player">♫</i>-->
 						<!--<md-icon class="ico-player">♫</md-icon>-->
+						<!--<i class="material-icons">music_note</i>-->
+						<md-icon class="ico-player my-button" v-bind:class='{active:player}' style="font-size: 35px;top: -9px;left: -8px;">music_note</md-icon>
 					</md-button>
 				</md-card-actions>
 			</md-card-media-actions>
@@ -90,6 +92,12 @@
 		top: 16px;
 	}
 	
+	.my-button {
+		font-size: 38px;
+		top: -9px;
+		left: -5px;
+	}
+	
 	#toolbar {
 		position: absolute;
 		right: -470px;
@@ -119,8 +127,8 @@
 		margin-left: 0px;
 	}
 	
-	.ico-player {
-		width: 30px;
+	#player-button .ico-player {
+		/*width: 30px;
 		min-width: 24px;
 		height: 30px;
 		min-height: 24px;
@@ -130,15 +138,12 @@
 		align-items: center;
 		fill: currentColor;
 		text-rendering: optimizeLegibility;
-		vertical-align: middle;
+		vertical-align: middle;*/
 		color: #aaa;
 	}
 	
-	.ico-player.active {
+	#player-button .ico-player.active {
 		color: #e91e63;
 	}
-	
-	.ico-back {
-		color: #aaa;
-	}
+
 </style>

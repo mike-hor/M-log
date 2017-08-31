@@ -25,7 +25,7 @@
 						</md-button-toggle>
 						<div class="clear"></div>
 						<div class="type-item" v-for="(item,index) in currentType">
-							<a>{{item.title}}</a>				
+							<a href="" @click.prevent="detail(item.sha)">{{item.title}}</a><span>({{item.date}})</span>				
 						</div>
 					</div>
 				</article>

@@ -20,18 +20,18 @@
         ]
     },
     "dependencies": {
-        "axios": "^0.16.1",
-        "babel-runtime": "^6.18.0",
-        "github-markdown-css": "^2.6.0",
-        "highlight.js": "^9.11.0",
-        "marked": "^0.3.6",
-        "perfect-scrollbar": "^0.6.16",
-        "promise-polyfill": "^6.0.2",
-        "vue": "^2.2.0",
-        "vue-material": "^0.7.1",
-        "vue-router": "^2.0.0",
-        "vuex": "^2.0.0",
-        "vuex-router-sync": "^4.0.0"
+        "axios": "0.16.1",
+        "babel-runtime": "6.18.0",
+        "github-markdown-css": "2.6.0",
+        "highlight.js": "9.11.0",
+        "marked": "0.3.6",
+        "perfect-scrollbar": "0.6.16",
+        "promise-polyfill": "6.0.2",
+        "vue": "2.2.0",
+        "vue-material": "0.7.1",
+        "vue-router": "2.0.0",
+        "vuex": "2.0.0",
+        "vuex-router-sync": "4.0.0"
     },
     "devDependencies": {
         "autoprefixer": "^6.4.0",
@@ -58,8 +58,8 @@
         "postcss-nested": "^1.0.0",
         "style-loader": "^0.13.1",
         "vue-loader": "^11.0.0",
-        "vue-template-compiler": "^2.2.0",
-        "webpack": "^2.2.0",
+        "vue-template-compiler": "2.2.0",
+        "webpack": "2.2.0",
         "webpack-dev-middleware": "^1.8.1",
         "webpack-hot-middleware": "^2.12.2"
     }

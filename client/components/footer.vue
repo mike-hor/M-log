@@ -57,7 +57,7 @@
 		position: relative;
 	}
 	.purple{
-		color: #e91e63;
+		color: #42b983;
 	}
 	.copy {
 		/*position: absolute;

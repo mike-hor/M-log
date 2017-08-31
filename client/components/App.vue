@@ -28,11 +28,13 @@
 		margin: 0;
 		font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', Ubuntu, 'segoe ui', arial, sans-serif;
 	}
-	.live2d-container{
+	
+	.live2d-container {
 		position: absolute;
 		left: 0px;
 		top: 50%;
 	}
+	
 	.slider-content {
 		padding: 0 15px;
 	}
@@ -111,7 +113,7 @@
 		}
 	}
 </style>
-<style>	
+<style>
 	.md-sidenav .md-sidenav-content {
 		width: 158px;
 	}

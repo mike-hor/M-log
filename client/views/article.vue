@@ -64,7 +64,7 @@
 		computed: {},
 		//keep-live 后只能在此处实现获取数据
 		activated: function() {
-			//			console.log('activated')
+			//console.log('activated')
 			this.fetchData()
 		},
 		mounted: function() {
@@ -78,11 +78,14 @@
 				this.resize();
 			});
 		},
-		beforeRouteUpdate(to, from, next) {
-			next();
-			this.fetchData()
-			//			console.log('beforeRouteUpdate');
-		},
+		//		beforeRouteUpdate(to, from, next) {
+		//			console.log('123')
+		//			next(vm => {
+		//				// 通过 `vm` 访问组件实例
+		//			})
+		//			//this.fetchData()
+		//			console.log('beforeRouteUpdate');
+		//		},
 		methods: {
 			resize() {
 				this.$refs.article.style.height = (document.body.clientHeight - 160) + 'px';
@@ -169,6 +172,13 @@
 				article.scrollTop = 0;
 				Ps.update(article);
 			}
+		},
+		watch: {
+			$route(to, from) {
+				if(to.name === "article") {
+					this.fetchData();
+				}
+			}
 		}
 	}
 </script>
@@ -238,6 +248,15 @@
 	{
 		opacity: 0
 	}
+		.md-theme-default a:not(.md-button) {
+		color: #42b983;
+		text-decoration: none;
+	}
+	
+	.md-theme-default a:not(.md-button):hover {
+		color: #42b983;
+		text-decoration: none;
+	}
 </style>
 <style>
 	#article .markdown-body blockquote {
@@ -283,7 +302,15 @@
 			min-width: 90%;
 		}
 	}
+	.md-theme-default p a:not(.md-button) {
+		color: #42b983;
+		text-decoration: none;
+	}
 	
+	.md-theme-default p a:not(.md-button):hover {
+		color: #42b983;
+		text-decoration: none;
+	}
 	.md-theme-default .markdown-body code:not(.hljs) {
 		color: #333;
 		background-color: transparent;
