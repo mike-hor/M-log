@@ -1,6 +1,9 @@
 var thisRef = this;
 window.onload = function() {
-    IsPC()&&start();
+    if(IsPC()){
+       document.querySelector('.live2d-container').style.display = "none";
+       start();
+    }
 }
 function IsPC{     
      var userAgentInfo = navigator.userAgent;   
