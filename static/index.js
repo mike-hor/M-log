@@ -1,8 +1,9 @@
 var thisRef = this;
 window.onload = function() {
-    if(IsPC()){
-       document.querySelector('.live2d-container').style.display = "none";
+    if(IsPC()){       
        start();
+    }else{
+	      document.querySelector('.live2d-container').style.display = "none";    
     }
 }
 function IsPC{     
